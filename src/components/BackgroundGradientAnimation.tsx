@@ -2,8 +2,8 @@ import { cn } from "../utilities/cn";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgba(0,0,0,0.3)",
-  gradientBackgroundEnd = "rgba(0,0,0,0.3)",
+  gradientBackgroundStart = "transparent",
+  gradientBackgroundEnd = "transparent",
   firstColor = "169, 152, 152",
   secondColor = "169, 152, 152",
   thirdColor = "91, 34, 92",
@@ -151,7 +151,7 @@ export const BackgroundGradientAnimation = ({
             className={cn(
               `absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)_no-repeat]`,
               `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
-              `opacity-40`
+              `opacity-30`
             )}
           ></div>
         )}
