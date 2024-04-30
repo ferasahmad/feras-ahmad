@@ -8,8 +8,8 @@ const About: NextPage = () => {
   return (
     <Container>
       <AnimateOnScroll>
-        <DesktopImage src="/me.svg" height={300} width={300} alt="" />
-        <MobileImage src="/me.svg" height={200} width={200} alt="" />
+        <DesktopImage src="/images/me.svg" height={300} width={300} alt="" />
+        <MobileImage src="/images/me.svg" height={200} width={200} alt="" />
       </AnimateOnScroll>
       <AnimateOnScroll>
         <Text>

@@ -77,7 +77,7 @@ const TimelineItem = ({
       <CompanyName index={index}>{experience.company}</CompanyName>
       <StartDate>{experience.startDate}</StartDate>
       <ImageContainer index={index}>
-        <Image fill src="/timeline.svg" alt="" />
+        <Image fill src="/images/timeline.svg" alt="" />
       </ImageContainer>
       <EmptySpace index={index} />
     </TimelineImageContainer>
@@ -104,7 +104,7 @@ const Container = styled.div`
 
 const StartDate = styled.p`
   position: absolute;
-  font-size: 20px;
+  font-size: 15px;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -119,7 +119,7 @@ const StartDate = styled.p`
 const CompanyName = styled.p<{ index: number }>`
   margin: -40px 0 -40px 0;
   white-space: nowrap;
-  font-size: 23px;
+  font-size: 20px;
   @media (max-width: ${BREAKPOINTS.LG}) {
     font-size: 16px;
     white-space: wrap;

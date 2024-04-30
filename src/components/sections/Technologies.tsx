@@ -34,12 +34,17 @@ const Item = ({ technology }: { technology: string }) => {
   return (
     <IconContainer>
       <DesktopImage
-        src={`/${technology}.png`}
+        src={`/images/${technology}.png`}
         alt=""
         width={100}
         height={100}
       />
-      <MobileImage src={`/${technology}.png`} alt="" width={80} height={80} />
+      <MobileImage
+        src={`/images/${technology}.png`}
+        alt=""
+        width={80}
+        height={80}
+      />
       <IconLabel>{technology}</IconLabel>
     </IconContainer>
   );
@@ -69,12 +74,13 @@ const Container = styled.div`
 const IconLabel = styled.p`
   text-transform: uppercase;
   font-size: 14px;
+  margin-top: 15px;
   letter-spacing: 3px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
     font-size: 12px;
-    margin: 0;
     margin-top: 10px;
+    margin: 0;
   }
 `;
 

@@ -88,7 +88,7 @@ const Contact: NextPage = () => {
           {step === 3 && (
             <>
               <ErrorIcon
-                src="/fail.png"
+                src="/images/fail.png"
                 height={150}
                 width={150}
                 alt=""

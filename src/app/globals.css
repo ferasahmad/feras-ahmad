@@ -9,6 +9,36 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Zerovelo;
+  src: url("/fonts/zerovelo.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: DMS Sans;
+  src: url("/fonts/DMSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Blinker;
+  src: url("/fonts/Blinker-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Blinker;
+  src: url("/fonts/Blinker-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: ZeroVelo;
+  src: url("/fonts/zerovelo.ttf");
+  font-weight: 700;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

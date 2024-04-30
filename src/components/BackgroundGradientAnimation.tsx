@@ -9,7 +9,7 @@ export const BackgroundGradientAnimation = ({
   thirdColor = "91, 34, 92",
   fourthColor = "4, 65, 112",
   pointerColor = "227, 227, 227",
-  size = "50%",
+  size = "100px",
   blendingValue = "hard-light",
   children,
   className,
@@ -73,8 +73,8 @@ export const BackgroundGradientAnimation = ({
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
       const rect = interactiveRef.current.getBoundingClientRect();
-      setTgX(event.clientX - rect.left);
-      setTgY(event.clientY - rect.top);
+      setTgX(event.clientX - rect.left - parseInt(size) / 2); // Centering X coordinate
+      setTgY(event.clientY - rect.top - parseInt(size) / 2); // Centering Y coordinate
     }
   };
 
@@ -86,7 +86,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "h-full w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >
@@ -115,7 +115,7 @@ export const BackgroundGradientAnimation = ({
           isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
         )}
       >
-        <div
+        {/* <div
           className={cn(
             `absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
@@ -142,18 +142,27 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(40%-var(--size)/2)] left-[calc(80%-var(--size)/2)]`,
             `opacity-50`
           )}
-        ></div>
+        ></div> */}
 
         {interactive && (
           <div
             ref={interactiveRef}
             onMouseMove={handleMouseMove}
+            style={{
+              transform: `translate(${curX}px, ${curY}px)`,
+            }}
             className={cn(
-              `absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)_no-repeat]`,
-              `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
-              `opacity-30`
+              "absolute",
+              "[background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)]",
+              "no-repeat",
+              "[mix-blend-mode:var(--blending-value)]",
+              "w-full",
+              "h-full",
+              "-top-1/2",
+              "-left-1/2",
+              "opacity-20"
             )}
-          ></div>
+          />
         )}
       </div>
     </div>

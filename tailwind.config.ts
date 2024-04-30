@@ -13,6 +13,9 @@ module.exports = {
     extend: {
       fontFamily: {
         collects: ["Collects", "sans-serif"],
+        zerovelo: ["ZeroVelo", "sans-serif"],
+        dms: ["DMS Sans", "sans-serif"],
+        blinker: ["Blinker", "sans-serif"],
       },
       animation: {
         first: "moveVertical 30s ease infinite",
