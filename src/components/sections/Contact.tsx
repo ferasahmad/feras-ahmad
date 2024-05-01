@@ -9,8 +9,8 @@ import { isValidEmail } from "../../utilities/helpers";
 import Image from "next/image";
 
 const Contact: NextPage = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("test@gmail.com");
+  const [message, setMessage] = useState("hello");
   const [errorMessage, setErrorMessage] = useState("");
   const [step, setStep] = useState<number>(1);
 

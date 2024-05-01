@@ -12,7 +12,6 @@ export const config = {
 };
 
 export default async function middleware(request: NextRequest) {
-  console.log("helloo!O!!!!!!");
   const ip = request.ip ?? "127.0.0.1";
   const { success, limit, reset, remaining } = await ratelimit.limit(ip);
 
@@ -24,6 +23,7 @@ export default async function middleware(request: NextRequest) {
     response.headers.set("RateLimit-Limit", limit.toString());
     response.headers.set("RateLimit-Remaining", remaining.toString());
     response.headers.set("RateLimit-Reset", reset.toString());
+
     return response;
   }
 }
