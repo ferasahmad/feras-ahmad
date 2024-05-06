@@ -18,6 +18,42 @@ const About: NextPage = () => {
           gaming, and baking (though I&apos;m not great at it...)
         </Text>
       </AnimateOnScroll>
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          top: "0%",
+          left: "-40%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(145,35,64) 0%, transparent 60%)",
+          opacity: 0.3,
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          top: "20%",
+          left: "0%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(98,120,100) 0%, transparent 60%)",
+          opacity: 0.2,
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          width: "130%",
+          height: "100%",
+          top: "0%",
+          left: "10%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
+          opacity: 0.5,
+        }}
+      ></div>
     </Container>
   );
 };
