@@ -16,7 +16,7 @@ const Hero: NextPage = () => {
         </FadeInElement>
         <div className="absolute inset-0 flex items-center justify-center flex-col bg-gradient-to-b from-transparent to-black">
           <FadeInElement duration={1}>
-            <h1 className="text-center font-[Collects] text-7xl tracking-[10px] text-nowrap">
+            <h1 className="text-center font-[Collects] text-7xl tracking-[10px] lg-text-nowrap leading-tight">
               FERAS AHMAD
             </h1>
           </FadeInElement>
