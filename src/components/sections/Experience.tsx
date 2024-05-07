@@ -51,17 +51,67 @@ const Experience = () => {
   ];
 
   return (
-    <AnimateOnScroll>
-      <Container>
-        {experienceArray.map((experience) => (
-          <TimelineItem
-            experience={experience}
-            key={experienceArray.indexOf(experience)}
-            index={experienceArray.indexOf(experience)}
-          />
-        ))}
-      </Container>
-    </AnimateOnScroll>
+    <div style={{ position: "relative" }}>
+      <AnimateOnScroll>
+        <Container>
+          {experienceArray.map((experience) => (
+            <TimelineItem
+              experience={experience}
+              key={experienceArray.indexOf(experience)}
+              index={experienceArray.indexOf(experience)}
+            />
+          ))}
+        </Container>
+      </AnimateOnScroll>
+      <div
+        style={{
+          position: "absolute",
+          width: "90%",
+          height: "90%",
+          top: "0%",
+          left: "-40%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(145,35,64) 0%, transparent 60%)",
+          opacity: 0.25,
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          width: "90%",
+          height: "90%",
+          top: "20%",
+          left: "-10%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(98,120,100) 0%, transparent 60%)",
+          opacity: 0.3,
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          width: "110%",
+          height: "100%",
+          top: "10%",
+          left: "10%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
+          opacity: 0.5,
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          width: "90%",
+          height: "90%",
+          top: "-10%",
+          left: "50%",
+          backgroundImage:
+            "radial-gradient(circle at center, rgb(145,35,64) 0%, transparent 60%)",
+          opacity: 0.15,
+        }}
+      ></div>
+    </div>
   );
 };
 
@@ -91,6 +141,7 @@ const Container = styled.div`
   align-items: center;
   height: 70vh;
   width: 878px;
+  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 50vh;
     flex-direction: column;

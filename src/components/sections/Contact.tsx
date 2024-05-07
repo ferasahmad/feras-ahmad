@@ -98,6 +98,54 @@ const Contact: NextPage = () => {
             </>
           )}
         </OuterWrapper>
+        <div
+          style={{
+            position: "absolute",
+            width: "90%",
+            height: "90%",
+            top: "0%",
+            left: "-40%",
+            backgroundImage:
+              "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
+            opacity: 0.3,
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            width: "110%",
+            height: "100%",
+            top: "20%",
+            left: "-30%",
+            backgroundImage:
+              "radial-gradient(circle at center, rgb(145,35,64) 0%, transparent 60%)",
+            opacity: 0.2,
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            width: "90%",
+            height: "90%",
+            top: "10%",
+            left: "10%",
+            backgroundImage:
+              "radial-gradient(circle at center, rgb(98,120,100) 0%, transparent 60%)",
+            opacity: 0.3,
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            width: "90%",
+            height: "90%",
+            top: "0%",
+            left: "50%",
+            backgroundImage:
+              "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
+            opacity: 0.35,
+          }}
+        ></div>
       </Container>
     </AnimateOnScroll>
   );
@@ -105,6 +153,7 @@ const Contact: NextPage = () => {
 
 const Container = styled.div`
   flex-direction: column;
+  position: relative;
   width: 878px;
   height: 100vh;
   display: flex;
@@ -128,15 +177,10 @@ const OuterWrapper = styled.form`
   height: 450px;
   width: 100%;
   gap: 30px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  border: 2px solid white;
-  padding: 50px;
   box-sizing: border-box;
-
+  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     padding: 20px;
   }
