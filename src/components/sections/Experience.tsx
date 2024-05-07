@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import { BREAKPOINTS } from "../../constants/styles";
 import AnimateOnScroll from "../animations/AnimateOnScroll";
+import GradientCircle from "../GradientCircle";
 
 type Experience = {
   startDate: string;
@@ -51,17 +52,53 @@ const Experience = () => {
   ];
 
   return (
-    <AnimateOnScroll>
-      <Container>
-        {experienceArray.map((experience) => (
-          <TimelineItem
-            experience={experience}
-            key={experienceArray.indexOf(experience)}
-            index={experienceArray.indexOf(experience)}
-          />
-        ))}
-      </Container>
-    </AnimateOnScroll>
+    <div style={{ position: "relative" }}>
+      <AnimateOnScroll>
+        <Container>
+          {experienceArray.map((experience) => (
+            <TimelineItem
+              experience={experience}
+              key={experienceArray.indexOf(experience)}
+              index={experienceArray.indexOf(experience)}
+            />
+          ))}
+        </Container>
+      </AnimateOnScroll>
+      <div>
+        <GradientCircle
+          top="0%"
+          left="-40%"
+          color="rgb(145,35,64)"
+          opacity={0.25}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="20%"
+          left="-10%"
+          color="rgb(98,120,100)"
+          opacity={0.3}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="10%"
+          left="10%"
+          color="rgb(49,67,87)"
+          opacity={0.5}
+          width="110%"
+          height="100%"
+        />
+        <GradientCircle
+          top="-10%"
+          left="50%"
+          color="rgb(145,35,64)"
+          opacity={0.15}
+          width="90%"
+          height="90%"
+        />
+      </div>
+    </div>
   );
 };
 
@@ -91,6 +128,7 @@ const Container = styled.div`
   align-items: center;
   height: 70vh;
   width: 878px;
+  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 50vh;
     flex-direction: column;

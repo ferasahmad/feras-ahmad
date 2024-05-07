@@ -7,6 +7,7 @@ import Lottie from "react-lottie";
 import success from "../../lotties/success-animation.json";
 import { isValidEmail } from "../../utilities/helpers";
 import Image from "next/image";
+import GradientCircle from "../GradientCircle";
 
 const Contact: NextPage = () => {
   const [email, setEmail] = useState("");
@@ -98,6 +99,38 @@ const Contact: NextPage = () => {
             </>
           )}
         </OuterWrapper>
+        <GradientCircle
+          top="0%"
+          left="-40%"
+          color="rgb(49,67,87)"
+          opacity={0.3}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="20%"
+          left="-30%"
+          color="rgb(145,35,64)"
+          opacity={0.2}
+          width="110%"
+          height="100%"
+        />
+        <GradientCircle
+          top="10%"
+          left="10%"
+          color="rgb(98,120,100)"
+          opacity={0.3}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="0%"
+          left="50%"
+          color="rgb(49,67,87)"
+          opacity={0.35}
+          width="90%"
+          height="90%"
+        />
       </Container>
     </AnimateOnScroll>
   );
@@ -105,6 +138,7 @@ const Contact: NextPage = () => {
 
 const Container = styled.div`
   flex-direction: column;
+  position: relative;
   width: 878px;
   height: 100vh;
   display: flex;
@@ -128,15 +162,10 @@ const OuterWrapper = styled.form`
   height: 450px;
   width: 100%;
   gap: 30px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  border: 2px solid white;
-  padding: 50px;
   box-sizing: border-box;
-
+  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     padding: 20px;
   }
