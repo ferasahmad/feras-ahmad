@@ -19,6 +19,9 @@ const Hero: NextPage = () => {
             <h1 className="text-center font-[Collects] text-7xl tracking-[10px] lg-text-nowrap leading-tight">
               FERAS AHMAD
             </h1>
+            <p className="text-center pt-10 font-medium">
+              CURRENTLY UNDER MAINTENANCE
+            </p>
           </FadeInElement>
         </div>
       </div>

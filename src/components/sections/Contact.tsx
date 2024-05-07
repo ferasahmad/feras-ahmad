@@ -7,6 +7,7 @@ import Lottie from "react-lottie";
 import success from "../../lotties/success-animation.json";
 import { isValidEmail } from "../../utilities/helpers";
 import Image from "next/image";
+import GradientCircle from "../GradientCircle";
 
 const Contact: NextPage = () => {
   const [email, setEmail] = useState("");
@@ -98,54 +99,38 @@ const Contact: NextPage = () => {
             </>
           )}
         </OuterWrapper>
-        <div
-          style={{
-            position: "absolute",
-            width: "90%",
-            height: "90%",
-            top: "0%",
-            left: "-40%",
-            backgroundImage:
-              "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
-            opacity: 0.3,
-          }}
-        ></div>
-        <div
-          style={{
-            position: "absolute",
-            width: "110%",
-            height: "100%",
-            top: "20%",
-            left: "-30%",
-            backgroundImage:
-              "radial-gradient(circle at center, rgb(145,35,64) 0%, transparent 60%)",
-            opacity: 0.2,
-          }}
-        ></div>
-        <div
-          style={{
-            position: "absolute",
-            width: "90%",
-            height: "90%",
-            top: "10%",
-            left: "10%",
-            backgroundImage:
-              "radial-gradient(circle at center, rgb(98,120,100) 0%, transparent 60%)",
-            opacity: 0.3,
-          }}
-        ></div>
-        <div
-          style={{
-            position: "absolute",
-            width: "90%",
-            height: "90%",
-            top: "0%",
-            left: "50%",
-            backgroundImage:
-              "radial-gradient(circle at center, rgb(49,67,87) 0%, transparent 60%)",
-            opacity: 0.35,
-          }}
-        ></div>
+        <GradientCircle
+          top="0%"
+          left="-40%"
+          color="rgb(49,67,87)"
+          opacity={0.3}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="20%"
+          left="-30%"
+          color="rgb(145,35,64)"
+          opacity={0.2}
+          width="110%"
+          height="100%"
+        />
+        <GradientCircle
+          top="10%"
+          left="10%"
+          color="rgb(98,120,100)"
+          opacity={0.3}
+          width="90%"
+          height="90%"
+        />
+        <GradientCircle
+          top="0%"
+          left="50%"
+          color="rgb(49,67,87)"
+          opacity={0.35}
+          width="90%"
+          height="90%"
+        />
       </Container>
     </AnimateOnScroll>
   );
