@@ -13,17 +13,14 @@ const GradientCircle: React.FC<GradientCircleProps> = ({
   color,
   opacity,
 }) => {
-  const style: React.CSSProperties = {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    top,
-    left,
+  const dynamicStyle: React.CSSProperties = {
     backgroundImage: `radial-gradient(circle at center, ${color} 0%, transparent 65%)`,
     opacity,
+    top,
+    left,
   };
 
-  return <div style={style} />;
+  return <div style={dynamicStyle} className="absolute lg:w-11/12 lg:h-full" />;
 };
 
 export default GradientCircle;

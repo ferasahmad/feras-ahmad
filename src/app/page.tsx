@@ -21,6 +21,7 @@ export default function Home() {
       <Technologies />
       <MobileSpace />
       <Contact />
+      <MobileSpace />
     </div>
   );
 }
