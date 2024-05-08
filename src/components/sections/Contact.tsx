@@ -108,20 +108,20 @@ const Contact: NextPage = () => {
           height="90%"
         />
         <GradientCircle
-          top="20%"
+          top="0%"
           left="-30%"
           color="rgb(145,35,64)"
           opacity={0.2}
-          width="110%"
+          width="100%"
           height="100%"
         />
         <GradientCircle
-          top="10%"
-          left="10%"
+          top="20%"
+          left="20%"
           color="rgb(98,120,100)"
           opacity={0.3}
-          width="90%"
-          height="90%"
+          width="80%"
+          height="80%"
         />
         <GradientCircle
           top="0%"

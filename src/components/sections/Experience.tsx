@@ -128,7 +128,6 @@ const Container = styled.div`
   align-items: center;
   height: 70vh;
   width: 878px;
-  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 50vh;
     flex-direction: column;
@@ -205,6 +204,7 @@ const TimelineImageContainer = styled.div<{ index: number }>`
   width: 152px;
   margin-right: -3.3px;
   margin-left: -3.3px;
+  z-index: 100;
   flex-direction: ${({ index }) =>
     index % 2 === 0 ? "column-reverse" : "column"};
   @media (max-width: ${BREAKPOINTS.LG}) {
