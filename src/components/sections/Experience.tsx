@@ -70,32 +70,24 @@ const Experience = () => {
           left="-40%"
           color="rgb(145,35,64)"
           opacity={0.25}
-          width="90%"
-          height="90%"
         />
         <GradientCircle
           top="20%"
           left="-10%"
           color="rgb(98,120,100)"
           opacity={0.3}
-          width="90%"
-          height="90%"
         />
         <GradientCircle
           top="10%"
           left="10%"
           color="rgb(49,67,87)"
           opacity={0.5}
-          width="110%"
-          height="100%"
         />
         <GradientCircle
           top="-10%"
           left="50%"
           color="rgb(145,35,64)"
           opacity={0.15}
-          width="90%"
-          height="90%"
         />
       </div>
     </div>

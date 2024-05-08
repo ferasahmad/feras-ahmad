@@ -5,8 +5,6 @@ interface GradientCircleProps {
   left: string;
   color: string;
   opacity: number;
-  height?: string;
-  width?: string;
 }
 
 const GradientCircle: React.FC<GradientCircleProps> = ({
@@ -14,16 +12,14 @@ const GradientCircle: React.FC<GradientCircleProps> = ({
   left,
   color,
   opacity,
-  height,
-  width,
 }) => {
   const style: React.CSSProperties = {
     position: "absolute",
-    width: height || "100%",
-    height: width || "100%",
+    width: "100%",
+    height: "100%",
     top,
     left,
-    backgroundImage: `radial-gradient(circle at center, ${color} 0%, transparent 60%)`,
+    backgroundImage: `radial-gradient(circle at center, ${color} 0%, transparent 65%)`,
     opacity,
   };
 

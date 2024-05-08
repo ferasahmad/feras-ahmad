@@ -23,20 +23,19 @@ const About: NextPage = () => {
         top="0%"
         left="-40%"
         color="rgb(145,35,64)"
-        opacity={0.3}
+        opacity={0.2}
       />
       <GradientCircle
         top="20%"
         left="-10%"
         color="rgb(98,120,100)"
-        opacity={0.2}
+        opacity={0.25}
       />
       <GradientCircle
-        top="-10%"
+        top="-5%"
         left="30%"
         color="rgb(49,67,87)"
-        width="130%"
-        opacity={0.5}
+        opacity={0.4}
       />
     </Container>
   );

@@ -103,33 +103,25 @@ const Contact: NextPage = () => {
           top="0%"
           left="-40%"
           color="rgb(49,67,87)"
-          opacity={0.3}
-          width="90%"
-          height="90%"
+          opacity={0.2}
         />
         <GradientCircle
-          top="0%"
+          top="-10%"
           left="-30%"
           color="rgb(145,35,64)"
           opacity={0.2}
-          width="100%"
-          height="100%"
         />
         <GradientCircle
-          top="20%"
-          left="20%"
+          top="-5%"
+          left="15%"
           color="rgb(98,120,100)"
-          opacity={0.3}
-          width="80%"
-          height="80%"
+          opacity={0.25}
         />
         <GradientCircle
           top="0%"
           left="50%"
           color="rgb(49,67,87)"
-          opacity={0.35}
-          width="90%"
-          height="90%"
+          opacity={0.25}
         />
       </Container>
     </AnimateOnScroll>
