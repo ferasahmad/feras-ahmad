@@ -64,7 +64,7 @@ const Experience = () => {
           ))}
         </Container>
       </AnimateOnScroll>
-      <div>
+      <AnimateOnScroll>
         <GradientCircle
           top="0%"
           left="-40%"
@@ -89,7 +89,7 @@ const Experience = () => {
           color="rgb(145,35,64)"
           opacity={0.15}
         />
-      </div>
+      </AnimateOnScroll>
     </div>
   );
 };
