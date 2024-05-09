@@ -40,7 +40,7 @@ const Experience = () => {
     {
       startDate: "Jan 2021",
       endDate: "Jul 2021",
-      company: "Skyline Systems",
+      company: "Skyline Solutions",
       details: "",
     },
     {
@@ -139,9 +139,12 @@ const StartDate = styled.p`
   transform: translateX(-50%);
   margin: 0;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    font-size: 16px;
+    font-size: 14px;
     left: 50%;
     top: 40%;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -150,9 +153,9 @@ const CompanyName = styled.p<{ index: number }>`
   white-space: nowrap;
   font-size: 20px;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    font-size: 16px;
+    font-size: 15px;
     white-space: wrap;
-    width: 60px;
+    width: 70px;
     text-align: center;
     left: ${({ index }) => (index % 2 === 0 ? "0" : "auto")};
     right: ${({ index }) => (index % 2 === 0 ? "auto" : "0")};
@@ -162,6 +165,9 @@ const CompanyName = styled.p<{ index: number }>`
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -179,11 +185,15 @@ const ImageContainer = styled.div<{ index: number }>`
   height: 239.5px;
   width: 152px;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    margin: ${({ index }) => (index % 2 === 0 ? "0 70px 0 0" : "0 0 0 70px")};
+    margin: ${({ index }) => (index % 2 === 0 ? "0 85px 0 0" : "0 0 0 85px")};
     height: 170px;
     width: 102px;
     transform: ${({ index }) =>
       index % 2 === 0 ? "rotate(90deg)" : "rotate(270deg) scaleX(-1)"};
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      height: 140px;
+      width: 90px;
+    }
   }
 `;
 
@@ -205,6 +215,9 @@ const TimelineImageContainer = styled.div<{ index: number }>`
     justify-content: space-between;
     flex-direction: ${({ index }) => (index % 2 === 0 ? "row" : "row-reverse")};
     height: 98.5px;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      height: 85px;
+    }
   }
 `;
 

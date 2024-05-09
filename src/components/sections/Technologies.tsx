@@ -79,8 +79,6 @@ const IconLabel = styled.p`
 
   @media (max-width: ${BREAKPOINTS.LG}) {
     font-size: 12px;
-    margin-top: 10px;
-    margin: 0;
   }
 `;
 
