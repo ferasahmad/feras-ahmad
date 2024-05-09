@@ -45,8 +45,8 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 878px;
+  height: 100vh;
   justify-content: space-between;
   @media (max-width: ${BREAKPOINTS.LG}) {
     flex-direction: column;
