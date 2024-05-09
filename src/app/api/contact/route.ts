@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import { isValidEmail } from "@/utilities/helpers";
 import { NextRequest, NextResponse } from "next/server";

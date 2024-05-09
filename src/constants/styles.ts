@@ -1,5 +1,5 @@
 export const BREAKPOINTS = {
-  XS: "576px",
+  XS: "400px",
   SM: "600px",
   MD: "768px",
   LG: "992px",

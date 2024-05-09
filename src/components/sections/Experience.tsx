@@ -40,7 +40,7 @@ const Experience = () => {
     {
       startDate: "Jan 2021",
       endDate: "Jul 2021",
-      company: "Skyline Systems",
+      company: "Skyline Solutions",
       details: "",
     },
     {
@@ -64,40 +64,30 @@ const Experience = () => {
           ))}
         </Container>
       </AnimateOnScroll>
-      <div>
-        <GradientCircle
-          top="0%"
-          left="-40%"
-          color="rgb(145,35,64)"
-          opacity={0.25}
-          width="90%"
-          height="90%"
-        />
-        <GradientCircle
-          top="20%"
-          left="-10%"
-          color="rgb(98,120,100)"
-          opacity={0.3}
-          width="90%"
-          height="90%"
-        />
-        <GradientCircle
-          top="10%"
-          left="10%"
-          color="rgb(49,67,87)"
-          opacity={0.5}
-          width="110%"
-          height="100%"
-        />
-        <GradientCircle
-          top="-10%"
-          left="50%"
-          color="rgb(145,35,64)"
-          opacity={0.15}
-          width="90%"
-          height="90%"
-        />
-      </div>
+      <GradientCircle
+        top="0%"
+        left="-40%"
+        color="rgb(145,35,64)"
+        opacity={0.25}
+      />
+      <GradientCircle
+        top="20%"
+        left="-10%"
+        color="rgb(98,120,100)"
+        opacity={0.3}
+      />
+      <GradientCircle
+        top="10%"
+        left="10%"
+        color="rgb(49,67,87)"
+        opacity={0.5}
+      />
+      <GradientCircle
+        top="-10%"
+        left="50%"
+        color="rgb(145,35,64)"
+        opacity={0.15}
+      />
     </div>
   );
 };
@@ -128,7 +118,6 @@ const Container = styled.div`
   align-items: center;
   height: 70vh;
   width: 878px;
-  z-index: 100;
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 50vh;
     flex-direction: column;
@@ -148,9 +137,12 @@ const StartDate = styled.p`
   transform: translateX(-50%);
   margin: 0;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    font-size: 16px;
+    font-size: 14px;
     left: 50%;
     top: 40%;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -159,9 +151,9 @@ const CompanyName = styled.p<{ index: number }>`
   white-space: nowrap;
   font-size: 20px;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    font-size: 16px;
+    font-size: 15px;
     white-space: wrap;
-    width: 60px;
+    width: 70px;
     text-align: center;
     left: ${({ index }) => (index % 2 === 0 ? "0" : "auto")};
     right: ${({ index }) => (index % 2 === 0 ? "auto" : "0")};
@@ -171,6 +163,9 @@ const CompanyName = styled.p<{ index: number }>`
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -188,11 +183,15 @@ const ImageContainer = styled.div<{ index: number }>`
   height: 239.5px;
   width: 152px;
   @media (max-width: ${BREAKPOINTS.LG}) {
-    margin: ${({ index }) => (index % 2 === 0 ? "0 70px 0 0" : "0 0 0 70px")};
+    margin: ${({ index }) => (index % 2 === 0 ? "0 85px 0 0" : "0 0 0 85px")};
     height: 170px;
     width: 102px;
     transform: ${({ index }) =>
       index % 2 === 0 ? "rotate(90deg)" : "rotate(270deg) scaleX(-1)"};
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      height: 140px;
+      width: 90px;
+    }
   }
 `;
 
@@ -205,6 +204,7 @@ const TimelineImageContainer = styled.div<{ index: number }>`
   width: 152px;
   margin-right: -3.3px;
   margin-left: -3.3px;
+  z-index: 100;
   flex-direction: ${({ index }) =>
     index % 2 === 0 ? "column-reverse" : "column"};
   @media (max-width: ${BREAKPOINTS.LG}) {
@@ -213,6 +213,9 @@ const TimelineImageContainer = styled.div<{ index: number }>`
     justify-content: space-between;
     flex-direction: ${({ index }) => (index % 2 === 0 ? "row" : "row-reverse")};
     height: 98.5px;
+    @media (max-width: ${BREAKPOINTS.XS}) {
+      height: 85px;
+    }
   }
 `;
 

@@ -13,14 +13,15 @@ export default function Home() {
     <div className="flex items-center justify-center flex-col relative">
       {/* <BackgroundGradientAnimation containerClassName="absolute z-50" /> */}
       <Hero />
-      {/* <MobileSpace />
+      <MobileSpace />
       <About />
       <MobileSpace />
       <Experience />
       <MobileSpace />
       <Technologies />
       <MobileSpace />
-      <Contact /> */}
+      <Contact />
+      <MobileSpace />
     </div>
   );
 }
