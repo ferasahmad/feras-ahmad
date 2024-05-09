@@ -8,19 +8,17 @@ import GradientCircle from "../GradientCircle";
 const About: NextPage = () => {
   return (
     <Container>
-      <TextAndImage>
-        <AnimateOnScroll>
-          <DesktopImage src="/images/me.svg" height={300} width={300} alt="" />
-          <MobileImage src="/images/me.svg" height={200} width={200} alt="" />
-        </AnimateOnScroll>
-        <AnimateOnScroll>
-          <Text>
-            Hey there! I&apos;m Feras, a Software Engineer based in New Jersey.
-            When I&apos;m not coding, I enjoy taking photos, attending concerts,
-            gaming, and baking (though I&apos;m not great at it...)
-          </Text>
-        </AnimateOnScroll>
-      </TextAndImage>
+      <AnimateOnScroll>
+        <DesktopImage src="/images/me.svg" height={300} width={300} alt="" />
+        <MobileImage src="/images/me.svg" height={200} width={200} alt="" />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Text>
+          Hey there! I&apos;m Feras, a Software Engineer based in New Jersey.
+          When I&apos;m not coding, I enjoy taking photos, attending concerts,
+          gaming, and baking (though I&apos;m not great at it...)
+        </Text>
+      </AnimateOnScroll>
       <GradientCircle
         top="0%"
         left="-40%"
@@ -44,13 +42,6 @@ const About: NextPage = () => {
 };
 
 const Container = styled.div`
-  position: relative;
-  width: 878px;
-  height: 100vh;
-  justify-content: space-between;
-`;
-
-const TextAndImage = styled.div`
   position: relative;
   display: flex;
   align-items: center;
