@@ -243,6 +243,7 @@ const ErrorIcon = styled(Image)`
 
 const RequestStatus = styled.p`
   text-transform: uppercase;
+  text-align: center;
   font-size: 14px;
   letter-spacing: 3px;
 
