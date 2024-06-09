@@ -14,10 +14,13 @@ const Contact: NextPage = () => {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [step, setStep] = useState<number>(1);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
     try {
-      e.preventDefault();
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -36,8 +39,10 @@ const Contact: NextPage = () => {
         setStep(3);
       }
     } catch (error) {
-      console.log(`ERROR: ${error}`);
+      setErrorMessage("An error occurred while sending the message.");
+      setStep(3);
     } finally {
+      setLoading(false);
       setEmail("");
       setMessage("");
     }
@@ -66,9 +71,10 @@ const Contact: NextPage = () => {
               />
               <Button
                 type="submit"
-                disabled={!isValidEmail(email) || !message.trim()}
+                disabled={!isValidEmail(email) || !message.trim() || loading}
+                loading={loading}
               >
-                SEND
+                {loading ? <CustomSpinner /> : "SEND"}
               </Button>
             </>
           )}
@@ -80,8 +86,8 @@ const Contact: NextPage = () => {
                   autoplay: true,
                   animationData: success,
                 }}
-                height={150}
-                width={150}
+                height={200}
+                width={200}
               />
               <RequestStatus>Message sent. Talk to you soon!</RequestStatus>
             </>
@@ -215,21 +221,25 @@ const H1 = styled.h1`
   font-size: 30px;
 `;
 
-const Button = styled.button`
+const Button = styled.button<{ loading: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-end;
   font-family: Blinker;
-  padding: 10px 40px;
   border: none;
+  height: 45px;
+  width: 140px;
   border-radius: 5px;
   background-color: white;
   color: black;
   font-size: 20px;
-  cursor: pointer;
+  cursor: ${(props) => (props.loading ? "default" : "pointer")};
   outline: none;
   transition: 0.3s;
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${(props) => (props.loading ? "white" : "black")};
+    color: ${(props) => (props.loading ? "black" : "white")};
   }
   &:disabled {
     opacity: 0.5;
@@ -251,6 +261,23 @@ const RequestStatus = styled.p`
     font-size: 12px;
     margin: 0;
     margin-top: 10px;
+  }
+`;
+
+const CustomSpinner = styled.div`
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `;
 
