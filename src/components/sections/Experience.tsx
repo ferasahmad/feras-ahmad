@@ -14,31 +14,25 @@ type Experience = {
 const Experience = () => {
   const experienceArray = [
     {
-      startDate: "Jul 2018",
+      startDate: "Aug 2018",
       endDate: "Dec 2018",
-      company: "V1 Apps",
-      details: "",
-    },
-    {
-      startDate: "Jan 2019",
-      endDate: "Oct 2019",
       company: "HopUp",
       details: "",
     },
     {
-      startDate: "Oct 2019",
-      endDate: "Mar 2020",
+      startDate: "Feb 2019",
+      endDate: "Jan 2020",
       company: "V1 Apps",
       details: "",
     },
     {
       startDate: "Mar 2020",
-      endDate: "Jan 2021",
+      endDate: "Dec 2020",
       company: "Scout",
       details: "",
     },
     {
-      startDate: "Jan 2021",
+      startDate: "Feb 2021",
       endDate: "Jul 2021",
       company: "Skyline Solutions",
       details: "",
